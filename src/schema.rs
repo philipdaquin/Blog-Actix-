@@ -1,17 +1,17 @@
 table! {
     comments (id) {
-        id -> Integer,
-        user_id -> Integer,
-        post_id -> Integer,
+        id -> Int4,
+        user_id -> Int4,
+        post_id -> Int4,
         body -> Text,
     }
 }
 
 table! {
     posts (id) {
-        id -> Integer,
-        user_id -> Integer,
-        title -> Text,
+        id -> Int4,
+        user_id -> Int4,
+        title -> Varchar,
         body -> Text,
         published -> Bool,
     }
@@ -19,8 +19,8 @@ table! {
 
 table! {
     users (id) {
-        id -> Integer,
-        username -> Text,
+        id -> Int4,
+        username -> Varchar,
     }
 }
 

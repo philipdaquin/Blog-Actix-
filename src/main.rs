@@ -9,7 +9,7 @@ fn main() -> std::io::Result<()> {
     env_logger::init(); 
     let database_url = env::var("DATABASE_URL").expect("DATABASE_URL must be set"); 
     
-    let app = blog_actix::Blog::new(8998); 
+    let app = blog_server::Blog::new(8998); 
     app.run(database_url) 
     
 }
